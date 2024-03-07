@@ -10,6 +10,41 @@ fetch("https://type.fit/api/quotes")
 });
 
 console.log(quotesArray);
+
+let imgIndex = 1;
+
+const img1 = document.getElementById('img1');
+const img2 = document.getElementById('img2');
+const img3 = document.getElementById('img3');
+
+img1.classList.remove('hidden');
+img2.classList.add('hidden');
+img3.classList.add('hidden');
+
+function nextImage(){
+
+    if(imgIndex > 3){
+        imgIndex = 1;
+    }
+
+    if(imgIndex == 1){
+        img1.classList.remove('hidden');
+        img2.classList.add('hidden');
+        img3.classList.add('hidden');
+    }else if(imgIndex == 2){
+        img1.classList.add('hidden');
+        img2.classList.remove('hidden');
+        img3.classList.add('hidden'); 
+    }else if(imgIndex == 3){
+        img1.classList.add('hidden');
+        img2.classList.add('hidden');
+        img3.classList.remove('hidden');
+    }
+
+    imgIndex++;
+}
+
+setInterval(nextImage,3000);
 // let apiUrl = `https://zenquotes.io/api/today`;
 //https://zenquotes.io/api/random
 
