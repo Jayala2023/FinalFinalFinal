@@ -14,8 +14,7 @@ h2{
 }
 
 .background{
-    background-size: cover;
-    background-image:url('../images/space2.jpg') ;
+    background-color: white;
 }
 
 footer{
@@ -31,4 +30,8 @@ footer{
     max-height: 50%;
     max-width: 50%;
     
+}
+
+.navBar{
+    margin-top: auto;
 }
