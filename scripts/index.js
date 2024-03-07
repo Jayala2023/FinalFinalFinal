@@ -1,12 +1,16 @@
 const quotesArray = [];
+const quote = document.getElementById('quote');
+const author = document.getElementById('author');
+var randNum = Math.floor( Math.random() * 10 );
 
 fetch("https://type.fit/api/quotes")
 .then(function(response) {
     return response.json();
 })
 .then(function(data) {
-    console.log(data[1]);
-    //quotesArray = data
+    console.log(data[randNum]);
+    quote.innerHTML = data[randNum].text;
+    author.innerHTML = `-${data[randNum].author};`
 });
 
 console.log(quotesArray);
@@ -58,7 +62,7 @@ setInterval(nextImage,3000);
 //     console.log(data.results);
 // });
 
-// function loadUsers(users){
+// function loadQuotes(quotes){
 //     // Loop over the users
 //     // For each uesr
     

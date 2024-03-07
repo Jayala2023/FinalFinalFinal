@@ -30,6 +30,11 @@ p{
     padding-bottom: 50px;
     font-size: 32px;
 }
+q{
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 32px;  
+}
 
 .hidden{
     display: none;
@@ -45,15 +50,6 @@ footer{
     padding: 50px;
     
 }
-
-/* .titleB{
-    font-size: 30px;
-    background-color: black;
-    border-radius: 25px;
-    max-height: 50%;
-    max-width: 50%;
-    
-} */
 
 body {
     font-family: Arial, sans-serif;
